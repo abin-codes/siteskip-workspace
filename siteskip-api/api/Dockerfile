@@ -1,4 +1,5 @@
-FROM eclipse-temurin:17-jdk-alpine
+# Use Java 21 to match your project configuration
+FROM eclipse-temurin:21-jdk-alpine
 
 WORKDIR /app
 
@@ -6,7 +7,7 @@ WORKDIR /app
 COPY .mvn/ .mvn/
 COPY mvnw pom.xml ./
 
-# Grant execution permission to the maven wrapper (Fixes the permission denied error)
+# Grant execution permission to the maven wrapper
 RUN chmod +x mvnw
 
 # Download dependencies
