@@ -121,7 +121,7 @@ export default function App() {
       setStatusMessage('AI mapping intent...');
       
       try {
-        const response = await fetch('http://localhost:8080/api/v1/navigate/resolve', {
+        const response = await fetch('http://siteskip-api.onrender.com/api/v1/navigate/resolve', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ domain, query, links: allLinks })
