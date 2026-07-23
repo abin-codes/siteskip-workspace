@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "SiteSkip",
+  "version": "1.0.0",
+  "description": "AI-powered semantic navigation for complex websites.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "icons": {
+    "16": "icons/siteskip-16x16.png",
+    "32": "icons/siteskip-32x32.png",
+    "48": "icons/siteskip_48x48.png",
+    "128": "icons/siteskip_128x128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/siteskip-16x16.png",
+      "32": "icons/siteskip-32x32.png",
+      "48": "icons/siteskip_48x48.png",
+      "128": "icons/siteskip_128x128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}
