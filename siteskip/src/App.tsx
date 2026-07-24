@@ -268,6 +268,26 @@ export default function App() {
           </div>
         )}
       </div>
+      {/* --- NEW FOOTER: Privacy & Terms --- */}
+      <div className="shrink-0 flex justify-center items-center gap-3 pt-2 mt-2 border-t border-slate-200 text-[10px] text-slate-400">
+        <a 
+          href="https://siteskip-api.onrender.com/privacy.html" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="hover:text-indigo-500 transition-colors"
+        >
+          Privacy Policy
+        </a>
+        <span>|</span>
+        <a 
+          href="https://siteskip-api.onrender.com/terms.html" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="hover:text-indigo-500 transition-colors"
+        >
+          Terms of Service
+        </a>
+      </div>
     </div>
   );
 }
